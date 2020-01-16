@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const routes = require('./routes');
 
 const app = express();
@@ -8,9 +9,9 @@ const app = express();
  * 
  * DATABASE CONECTIONS SETTINGS
  */
-const DB_USER_NAME = 'username';
-const DB_USER_PASS = 'password';
-const DB_TABLE ='table';
+const DB_USER_NAME = 'gabrielcarmo';
+const DB_USER_PASS = 'dtr620!!!';
+const DB_TABLE ='test';
 const DB_URL ='mongodb+srv://'+DB_USER_NAME+':'+DB_USER_PASS+'@cluster0-ioryu.mongodb.net/'+DB_TABLE+'?retryWrites=true&w=majority'
 
 mongoose.connect(DB_URL,{
@@ -34,7 +35,7 @@ mongoose.connect(DB_URL,{
  *          Body Params:  ->req.body (Data to create or update info)
  *          
  */
-
+ app.use(cors());
  app.use(express.json()) //define body to json
  app.use(routes) /// routes created on route files
 
