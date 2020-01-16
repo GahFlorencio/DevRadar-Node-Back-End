@@ -9,9 +9,9 @@ const app = express();
  * 
  * DATABASE CONECTIONS SETTINGS
  */
-const DB_USER_NAME = 'gabrielcarmo';
-const DB_USER_PASS = 'dtr620!!!';
-const DB_TABLE ='test';
+const DB_USER_NAME = 'user';
+const DB_USER_PASS = 'pass';
+const DB_TABLE ='table';
 const DB_URL ='mongodb+srv://'+DB_USER_NAME+':'+DB_USER_PASS+'@cluster0-ioryu.mongodb.net/'+DB_TABLE+'?retryWrites=true&w=majority'
 
 mongoose.connect(DB_URL,{
